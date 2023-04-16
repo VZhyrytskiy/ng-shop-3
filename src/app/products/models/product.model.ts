@@ -1,4 +1,4 @@
-import {ProductCategory} from "../products.type";
+import { ProductCategory } from '../products.type';
 
 export class Product {
   constructor(
@@ -8,6 +8,5 @@ export class Product {
     public price: number,
     public category: ProductCategory,
     public isAvailable: boolean
-  ) {
-  }
+  ) {}
 }

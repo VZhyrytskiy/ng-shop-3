@@ -1,5 +1,5 @@
 export enum ProductCategory {
-  STANDARD= 'Standard',
+  STANDARD = 'Standard',
   MEAT = 'Meat',
-  VEGAN = 'Vegan'
+  VEGAN = 'Vegan',
 }
