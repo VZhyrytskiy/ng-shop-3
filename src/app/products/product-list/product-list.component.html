@@ -1,0 +1,7 @@
+<div *ngIf="products.length else emptyTemplate">
+    <app-product *ngFor="let product of products; trackBy: trackByProducts" [product]="product"></app-product>
+</div>
+
+<ng-template #emptyTemplate>
+  <h3>No products yet</h3>
+</ng-template>
