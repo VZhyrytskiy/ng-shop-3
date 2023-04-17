@@ -1,6 +1,6 @@
 import { ProductCategory } from '../products.type';
 
-export class Product {
+export class ProductModel {
   constructor(
     public id: string,
     public name: string,

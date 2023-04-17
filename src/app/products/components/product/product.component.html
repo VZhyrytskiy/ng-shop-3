@@ -1,10 +1,10 @@
-<div>
-  <ul>
+<div class="container">
+  <ul class="list">
     <li>Name: {{ product.name }}</li>
     <li>Description: {{ product.description }}</li>
     <li>Price: {{ product.price }}</li>
     <li>Category: {{ product.category }}</li>
-    <li>Available: {{ product.isAvailable }}</li>
+    <li>Available: {{ product.isAvailable ? 'Yes' : 'No' }}</li>
   </ul>
-  <button (click)="onAddToCart()">Buy</button>
+  <button (click)="onAddToCart()" class="button">Buy</button>
 </div>

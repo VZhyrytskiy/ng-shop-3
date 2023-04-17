@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../services/product.service';
-import { Product } from '../models/product.model';
+import { ProductService } from '../../services/product.service';
+import { ProductModel } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -8,7 +8,7 @@ import { Product } from '../models/product.model';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
-  products: Product[] = [];
+  products: ProductModel[] = [];
 
   constructor(private productService: ProductService) {}
 
@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  trackByProducts(index: number, product: Product) {
+  trackByProducts(index: number, product: ProductModel) {
     return product.id;
   }
 }

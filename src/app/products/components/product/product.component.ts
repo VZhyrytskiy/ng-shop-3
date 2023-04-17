@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../models/product.model';
+import { ProductModel } from '../../models/product.model';
+import { CartService } from '../../../cart/services/cart-service';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,12 @@ import { Product } from '../models/product.model';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent {
-  @Input() product!: Product;
+  @Input() product!: ProductModel;
+
+  constructor(private cartService: CartService) {}
 
   onAddToCart() {
+    this.cartService.addItemToCart(this.product);
     console.log(`Added product: ID="${this.product.id}" name="${this.product.name}"`);
   }
 }

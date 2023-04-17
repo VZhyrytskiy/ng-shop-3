@@ -1,1 +1,5 @@
-<app-product-list></app-product-list>
+<Header class="header">
+  <a [routerLink]="['']" class="nav_link">go to home</a>
+  <a [routerLink]="['/cart']" class="nav_link">go to cart</a>
+</Header>
+<router-outlet></router-outlet>
