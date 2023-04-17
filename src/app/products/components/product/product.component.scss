@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  width: 600px;
+  padding-left: 50px;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.list {
+  padding: 0;
+}
+
+.button {
+  display: block;
+  margin: 5px;
+  width: 100px;
+  height: 35px;
+}
