@@ -1,4 +1,6 @@
 <div *ngIf="products.length; else emptyTemplate">
+  <!-- если вам подходит, то *ngFor можно разместить и на app-product
+  возможно будет меньше вложеность элементов -->
   <div *ngFor="let product of products; trackBy: trackByProducts" class="list_item">
     <app-product [product]="product"></app-product>
   </div>

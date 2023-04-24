@@ -13,6 +13,9 @@ export class CartService {
 
   removeItemFromCart(productId: string) {
     this.cartItems = this.cartItems.filter(({ id }) => id !== productId);
+    // если вы ничего не возвращаете, можно возвращать this
+    // тогда методы можно будет вызывать в цепочке
+    // obj.removeItemFromCart(...).getCartItems()
   }
 
   getCartItems() {
